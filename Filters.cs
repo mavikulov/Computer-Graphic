@@ -12,6 +12,49 @@ namespace CG
     abstract class Filters
     {
         protected abstract Color calculateNewPixelColor(Bitmap sourceImage, int x, int y);
+
+        public Color GetMaxPixel(Bitmap img)
+        {
+            int maxRed = 0;
+            int maxBlue = 0;
+            int maxGreen = 0;
+            for (int i = 0; i < img.Width; i++)
+            {
+                for (int j = 0; j < img.Height; j++)
+                {
+                    Color currentPixel = img.GetPixel(i, j);
+                    if (currentPixel.R > maxRed)
+                        maxRed = currentPixel.R;
+                    if (currentPixel.G > maxGreen)
+                        maxGreen = currentPixel.G;
+                    if (currentPixel.B > maxBlue)
+                        maxBlue = currentPixel.B;
+                }
+            }
+            return Color.FromArgb(maxRed, maxGreen, maxBlue);
+        }
+
+        public Color GetMinPixel(Bitmap img)
+        {
+            int minRed = 256;
+            int minBlue = 256;
+            int minGreen = 256;
+            for (int i = 0; i < img.Width; i++)
+            {
+                for (int j = 0; j < img.Height; j++)
+                {
+                    Color currentPixel = img.GetPixel(i, j);
+                    if (currentPixel.R < minRed)
+                        minRed = currentPixel.R;
+                    if (currentPixel.G > minGreen)
+                        minGreen = currentPixel.G;
+                    if (currentPixel.B > minBlue)
+                        minBlue = currentPixel.B;
+                }
+            }
+            return Color.FromArgb(minRed, minGreen, minBlue);
+        }
+
         public Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker)
         {
             Bitmap resultImage = new Bitmap(sourceImage.Width, sourceImage.Height);
@@ -36,52 +79,7 @@ namespace CG
         }
     }
 
-    class InvertFilter : Filters {
-        protected override Color calculateNewPixelColor(Bitmap sourceImage, int x, int y)
-        {
-            Color sourceColor = sourceImage.GetPixel(x, y);
-            Color resultColor = Color.FromArgb(255 - sourceColor.R, 255 - sourceColor.G, 255 - sourceColor.B);
-            return resultColor;
-        }
-    }
 
-
-    class PerfectReflector : Filters
-    {
-        public Color getMaximum(Bitmap bmp)
-        {
-            int maxR = -1, maxG = -1, maxB = -1;
-            for (int i = 0; i < bmp.Width; i++)
-            {
-                for (int j = 0; j < bmp.Height; j++)
-                {
-                    Color currentColor = bmp.GetPixel(i, j);
-                    if (currentColor.R > maxR)
-                        maxR = currentColor.R;
-                    if (currentColor.G > maxG)
-                        maxG = currentColor.G;
-                    if (currentColor.B > maxB)
-                        maxB = currentColor.B;
-                }
-            }
-            Color answer = Color.FromArgb(maxR, maxG, maxB);
-            return answer;
-        }
-
-        protected override Color calculateNewPixelColor(Bitmap sourceImage, int x, int y)
-        {
-            Color maxBrightness = getMaximum(sourceImage);
-            Color source = sourceImage.GetPixel(x, y);
-
-            int red, green, blue;
-            red = maxBrightness.R;
-            green = maxBrightness.G;
-            blue = maxBrightness.B;
-
-            Color resultColor = Color.FromArgb(source.R * 255 / red, source.B * 255 / blue, source.G * 255 / green);
-            return resultColor;
-        }
-    }
 
     class MatrixFilter: Filters
     {
@@ -112,48 +110,7 @@ namespace CG
                 }
             return Color.FromArgb(Clamp((int)resultR, 0, 255), Clamp((int)resultG, 0, 255), Clamp((int)resultB, 0, 255));
         }
-    }
-   
-    class BlurFilter : MatrixFilter
-    {
-        public BlurFilter()
-        {
-            int sizeX, sizeY;
-            sizeX = sizeY = 3;
-            kernel = new float[sizeX, sizeY];
-            for (int i = 0; i < sizeX; i++)
-                for (int j = 0; j < sizeY; j++)
-                    kernel[i, j] = 1.0f / (float)(sizeX * sizeY);
-        }
-    }
-
-    class GaussianFilter : MatrixFilter
-    {
-        public void createGaussianKernel(int radius, float sigma)
-        {
-            int size = 2 * radius + 1;
-            kernel = new float[size, size];
-            float norm = 0;
-
-            for (int i = -radius; i <= radius; i++)
-                for (int j = -radius; j <= radius; j++)
-                {
-                    kernel[i + radius, j + radius] = (float)(Math.Exp(-(i * i + j * j) / (2 * sigma * sigma)));
-                    norm += kernel[i + radius, j + radius];
-                }
-
-            for (int i = 0; i < size; i++)
-                for (int j = 0; j < size; j++)
-                    kernel[i, j] /= norm;
-        }
-
-        public GaussianFilter()
-        {
-            createGaussianKernel(3, 2);
-        }
-    }
-
-    
+    }    
    
 }
 

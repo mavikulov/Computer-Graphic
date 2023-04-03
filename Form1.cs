@@ -8,7 +8,7 @@ namespace CG
             InitializeComponent();
         }
 
-        private void ôàéëToolStripMenuItem_Click(object sender, EventArgs e)
+        private void îòêğûòüToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Image files|*.png;*.jpg;*.bmp|All files(*.*)|*.*";
@@ -21,10 +21,10 @@ namespace CG
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
+        private void ôàéëToolStripMenuItem_Click(object sender, EventArgs e) { }
 
-        }
+        private void pictureBox1_Click(object sender, EventArgs e) { }
+        
 
         private void èíâåğñèÿToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -77,5 +77,59 @@ namespace CG
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
+        private void ëèíåéíîåĞàñòÿæåíèåToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LinearStretching filter = new LinearStretching();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+
+        private void ñåïèÿToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sepia filter = new Sepia();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void óâåëè÷åíèåßğêîñòèToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IncreaseBrightness filter = new IncreaseBrightness();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void ïîëóòîíîâûéÔèëüòğToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GrayScale filter = new GrayScale();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void ïîâûøåíèåĞåçêîñòèToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Sharpening filter = new Sharpening();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void ìåäèàííûéÔèëüòğToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MedianFlilter filter = new MedianFlilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void ñîõğàíèòüÊàêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null) { 
+
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Title = "Ñîõğàíåíèå";
+            dialog.Filter = "Image files|*.png;*.jpg;*.bmp|All files(*.*)|*.*";
+            
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                    image.Save(dialog.FileName, System.Drawing.Imaging.ImageFormat.Png);
+            }
+
+            }
+        }
+
+        
     }
 }
