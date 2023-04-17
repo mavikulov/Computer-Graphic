@@ -2,6 +2,7 @@ namespace CG
 {
     public partial class MyForm : Form
     {
+        KernelConfiguration kernelForm = new KernelConfiguration();
         Bitmap image;
         public MyForm()
         {
@@ -77,16 +78,16 @@ namespace CG
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
-        private void ëèíåéíîåĞàñòÿæåíèåToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LinearStretching filter = new LinearStretching();
-            backgroundWorker1.RunWorkerAsync(filter);
-        }
-
 
         private void ñåïèÿToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Sepia filter = new Sepia();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void ıôôåêòÑòåêëàToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GlassesFilter filter = new GlassesFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
@@ -108,11 +109,6 @@ namespace CG
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
-        private void ìåäèàííûéÔèëüòğToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MedianFlilter filter = new MedianFlilter();
-            backgroundWorker1.RunWorkerAsync(filter);
-        }
 
         private void ñîõğàíèòüÊàêToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -130,6 +126,33 @@ namespace CG
             }
         }
 
-        
+        private void òî÷å÷íûåToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void âîëíûToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WavesFilter filter = new WavesFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void ôèëüòğÑîáåëÿToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SobelFilter filter = new SobelFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void âûäåëåíèåÃğàíèöîïåğàòîğÙàğğàToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BorderSelection filter = new BorderSelection();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            kernelForm = new KernelConfiguration();
+            kernelForm.Show();
+        }
     }
 }

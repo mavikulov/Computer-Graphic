@@ -34,30 +34,11 @@ namespace CG
             return Color.FromArgb(maxRed, maxGreen, maxBlue);
         }
 
-        public Color GetMinPixel(Bitmap img)
-        {
-            int minRed = 256;
-            int minBlue = 256;
-            int minGreen = 256;
-            for (int i = 0; i < img.Width; i++)
-            {
-                for (int j = 0; j < img.Height; j++)
-                {
-                    Color currentPixel = img.GetPixel(i, j);
-                    if (currentPixel.R < minRed)
-                        minRed = currentPixel.R;
-                    if (currentPixel.G > minGreen)
-                        minGreen = currentPixel.G;
-                    if (currentPixel.B > minBlue)
-                        minBlue = currentPixel.B;
-                }
-            }
-            return Color.FromArgb(minRed, minGreen, minBlue);
-        }
 
-        public Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker)
+        virtual public Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker)
         {
             Bitmap resultImage = new Bitmap(sourceImage.Width, sourceImage.Height);
+
             for (int i = 0; i < sourceImage.Width; i++)
             {
                 worker.ReportProgress((int)((float)i / resultImage.Width * 100));
