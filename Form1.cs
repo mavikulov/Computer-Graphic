@@ -154,5 +154,12 @@ namespace CG
             kernelForm = new KernelConfiguration();
             kernelForm.Show();
         }
+
+
+        private void êàñòîìíûéÔèëüòğToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomFilter filter = new CustomFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }

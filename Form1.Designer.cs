@@ -41,6 +41,7 @@
             this.полутоновыйФильтрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.эффектСтеклаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.волныToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.кастомныйФильтрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.матричныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.размытиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.фильтрГауссаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,14 +80,14 @@
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.открытьToolStripMenuItem.Text = "Открыть";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
             // 
             // сохранитьКакToolStripMenuItem
             // 
             this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
-            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.сохранитьКакToolStripMenuItem.Text = "Сохранить как...";
             this.сохранитьКакToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакToolStripMenuItem_Click);
             // 
@@ -108,9 +109,10 @@
             this.увеличениеЯркостиToolStripMenuItem,
             this.полутоновыйФильтрToolStripMenuItem,
             this.эффектСтеклаToolStripMenuItem,
-            this.волныToolStripMenuItem});
+            this.волныToolStripMenuItem,
+            this.кастомныйФильтрToolStripMenuItem});
             this.точечныеToolStripMenuItem.Name = "точечныеToolStripMenuItem";
-            this.точечныеToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.точечныеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.точечныеToolStripMenuItem.Text = "Точечные";
             this.точечныеToolStripMenuItem.Click += new System.EventHandler(this.точечныеToolStripMenuItem_Click);
             // 
@@ -163,6 +165,13 @@
             this.волныToolStripMenuItem.Text = "Волны";
             this.волныToolStripMenuItem.Click += new System.EventHandler(this.волныToolStripMenuItem_Click);
             // 
+            // кастомныйФильтрToolStripMenuItem
+            // 
+            this.кастомныйФильтрToolStripMenuItem.Name = "кастомныйФильтрToolStripMenuItem";
+            this.кастомныйФильтрToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.кастомныйФильтрToolStripMenuItem.Text = "Кастомный фильтр";
+            this.кастомныйФильтрToolStripMenuItem.Click += new System.EventHandler(this.кастомныйФильтрToolStripMenuItem_Click);
+            // 
             // матричныеToolStripMenuItem
             // 
             this.матричныеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -172,7 +181,7 @@
             this.повышениеРезкостиToolStripMenuItem,
             this.фильтрСобеляToolStripMenuItem});
             this.матричныеToolStripMenuItem.Name = "матричныеToolStripMenuItem";
-            this.матричныеToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.матричныеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.матричныеToolStripMenuItem.Text = "Матричные";
             // 
             // размытиеToolStripMenuItem
@@ -303,5 +312,6 @@
         private ToolStripMenuItem волныToolStripMenuItem;
         private ToolStripMenuItem фильтрСобеляToolStripMenuItem;
         private Button button2;
+        private ToolStripMenuItem кастомныйФильтрToolStripMenuItem;
     }
 }

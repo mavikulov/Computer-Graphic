@@ -12,6 +12,8 @@ namespace CG
     abstract class Filters
     {
         protected abstract Color calculateNewPixelColor(Bitmap sourceImage, int x, int y);
+        public int n;
+        public Random rnd = new Random();
 
         public Color GetMaxPixel(Bitmap img)
         {
