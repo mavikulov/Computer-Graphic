@@ -1,0 +1,16 @@
+C:\Users\maxon\Desktop\Projects\Computer-Graphic\№2\Anton\computer-graphics-course\second\Vikulov_tomogramm_visualizer\bin\Debug\Smolin_tomogramm_visualizer.exe.config
+C:\Users\maxon\Desktop\Projects\Computer-Graphic\№2\Anton\computer-graphics-course\second\Vikulov_tomogramm_visualizer\bin\Debug\Smolin_tomogramm_visualizer.exe
+C:\Users\maxon\Desktop\Projects\Computer-Graphic\№2\Anton\computer-graphics-course\second\Vikulov_tomogramm_visualizer\bin\Debug\Smolin_tomogramm_visualizer.pdb
+C:\Users\maxon\Desktop\Projects\Computer-Graphic\№2\Anton\computer-graphics-course\second\Vikulov_tomogramm_visualizer\bin\Debug\OpenTK.pdb
+C:\Users\maxon\Desktop\Projects\Computer-Graphic\№2\Anton\computer-graphics-course\second\Vikulov_tomogramm_visualizer\bin\Debug\OpenTK.xml
+C:\Users\maxon\Desktop\Projects\Computer-Graphic\№2\Anton\computer-graphics-course\second\Vikulov_tomogramm_visualizer\bin\Debug\OpenTK.dll.config
+C:\Users\maxon\Desktop\Projects\Computer-Graphic\№2\Anton\computer-graphics-course\second\Vikulov_tomogramm_visualizer\bin\Debug\OpenTK.GLControl.xml
+C:\Users\maxon\Desktop\Projects\Computer-Graphic\№2\Anton\computer-graphics-course\second\Vikulov_tomogramm_visualizer\obj\Debug\Vikulov_tomogramm_visualizer.csproj.AssemblyReference.cache
+C:\Users\maxon\Desktop\Projects\Computer-Graphic\№2\Anton\computer-graphics-course\second\Vikulov_tomogramm_visualizer\obj\Debug\Vikulov_tomogramm_visualizer.csproj.SuggestedBindingRedirects.cache
+C:\Users\maxon\Desktop\Projects\Computer-Graphic\№2\Anton\computer-graphics-course\second\Vikulov_tomogramm_visualizer\obj\Debug\Vikulov_tomogramm_visualizer.Form1.resources
+C:\Users\maxon\Desktop\Projects\Computer-Graphic\№2\Anton\computer-graphics-course\second\Vikulov_tomogramm_visualizer\obj\Debug\Smolin_tomogramm_visualizer.Properties.Resources.resources
+C:\Users\maxon\Desktop\Projects\Computer-Graphic\№2\Anton\computer-graphics-course\second\Vikulov_tomogramm_visualizer\obj\Debug\Vikulov_tomogramm_visualizer.csproj.GenerateResource.cache
+C:\Users\maxon\Desktop\Projects\Computer-Graphic\№2\Anton\computer-graphics-course\second\Vikulov_tomogramm_visualizer\obj\Debug\Vikulov_tomogramm_visualizer.csproj.CoreCompileInputs.cache
+C:\Users\maxon\Desktop\Projects\Computer-Graphic\№2\Anton\computer-graphics-course\second\Vikulov_tomogramm_visualizer\obj\Debug\Vikulov_tomogramm_visualizer.csproj.CopyComplete
+C:\Users\maxon\Desktop\Projects\Computer-Graphic\№2\Anton\computer-graphics-course\second\Vikulov_tomogramm_visualizer\obj\Debug\Smolin_tomogramm_visualizer.exe
+C:\Users\maxon\Desktop\Projects\Computer-Graphic\№2\Anton\computer-graphics-course\second\Vikulov_tomogramm_visualizer\obj\Debug\Smolin_tomogramm_visualizer.pdb
